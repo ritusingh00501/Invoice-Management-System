@@ -11,26 +11,35 @@ namespace WebApplication8.Views
 {
 
 
-	public partial class register
+	public partial class product
 	{
 
 		/// <summary>
-		/// userid control.
+		/// pname control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlInputText userid;
+		protected global::System.Web.UI.HtmlControls.HtmlInputText pname;
 
 		/// <summary>
-		/// psw control.
+		/// pd control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlInputPassword psw;
+		protected global::System.Web.UI.HtmlControls.HtmlInputText pd;
+
+		/// <summary>
+		/// stock control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl stock;
 
 		/// <summary>
 		/// ErrMsg control.
@@ -42,12 +51,12 @@ namespace WebApplication8.Views
 		protected global::System.Web.UI.WebControls.Label ErrMsg;
 
 		/// <summary>
-		/// registerbutton control.
+		/// ProductList control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button registerbutton;
+		protected global::System.Web.UI.WebControls.GridView ProductList;
 	}
 }
