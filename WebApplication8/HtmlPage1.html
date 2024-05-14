@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="number"] {
+            width: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form id="invoiceForm">
+        <h2>Invoice Generator</h2>
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
+        <label for="customerEmail">Customer Email:</label>
+        <input type="text" id="customerEmail" name="customerEmail" required>
+
+        <h3>Items</h3>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price ($)</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="item[]" required></td>
+                <td><input type="number" name="quantity[]" required></td>
+                <td><input type="number" name="price[]" required></td>
+            </tr>
+            <!-- Additional rows can be added dynamically with JavaScript -->
+        </table>
+
+        <button type="button" onclick="addRow()">Add Item</button>
+
+        <input type="submit" value="Generate Invoice">
+    </form>
+
+    <script>
+        function addRow() {
+            var table = document.querySelector('table');
+            var row = table.insertRow(table.rows.length - 1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            cell1.innerHTML = '<input type="text" name="item[]" required>';
+            cell2.innerHTML = '<input type="number" name="quantity[]" required>';
+            cell3.innerHTML = '<input type="number" name="price[]" required>';
+        }
+    </script>
+</body>
+</html>

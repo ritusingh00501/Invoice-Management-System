@@ -11,43 +11,34 @@ namespace WebApplication8.Views
 {
 
 
-	public partial class register
+	public partial class Site1
 	{
 
 		/// <summary>
-		/// userid control.
+		/// head control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlInputText userid;
+		protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
 		/// <summary>
-		/// psw control.
+		/// form1 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlInputPassword psw;
+		protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
 		/// <summary>
-		/// ErrMsg control.
+		/// MyContent control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label ErrMsg;
-
-		/// <summary>
-		/// registerbutton control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button registerbutton;
+		protected global::System.Web.UI.WebControls.ContentPlaceHolder MyContent;
 	}
 }

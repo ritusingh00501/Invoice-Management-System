@@ -36,20 +36,26 @@
       <div class="container">
         <div class="box form-box">
                         <header>Admin Login</header>
-            <form name=myform onsubmit="return validateform()">
+            <form name=myform onsubmit="return validateform()" runat="server">
                 <div class="field input">
-                    <label for="email">Email</label>
-                    <input type="text" name="user_id" id="user_id" autocomplete="off" required>
+                    <label for="Email">User Name</label>
+                    <asp:TextBox id="user_id" runat="server" TextMode="Email"></asp:TextBox><br />
+            
                 </div>
 
                 <div class="field input">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" autocomplete="off" required>
+                    <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox><br />
+            
                 </div>
 
                 <div class="field">
-                    
-                    <input type="submit" id=submitButton class="btn" name="submit" value="Login" required>
+                               <!-- <div class="row" aria-selected="undefined">
+<asp:Label runat="server" ID="ErrMsg" class="text-danger"></asp:Label>
+ <br></br>
+ </div>-->
+                  <asp:Button Text="Login" runat="server" CssClass="btn-success btn" ID="submitbutton" OnClick="submitbutton_Click"/>
+                   <!-- <input type="submit" id=submitButton class="btn" name="submit" value="Login" required>-->
                  </div>
                 <div class="links">
                     Don't have account? <a href="register.aspx">Register Now</a>
