@@ -30,27 +30,22 @@
   <div class="container">
     <div class="title">Registration</div>
     <div class="content">
-      <form name=myform  onsubmit="return validateform()" method=post runat="server">
+      <form name=myform action="register_validate.php" onsubmit="return validateform()" method=post>
         <div class="user-details">
           <div class="input-box">
             <span class="details">Username</span>
-            <input type="text" name=user_id placeholder="Enter your username" id="userid" runat="server" required>
+            <input type="text" name=user_id placeholder="Enter your username" required>
           </div>
      
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="password" name=password placeholder="Enter your password" id="psw" runat="server" required>
+            <input type="password" name=password placeholder="Enter your password" required>
           </div>
          
 	</div>
-                        <div class="field">
-                                <div class="row" aria-selected="undefined">
-<asp:Label runat="server" ID="ErrMsg" class="text-danger"></asp:Label>
- <br></br>
- </div>
-                  <asp:Button Text="Register" runat="server" CssClass="btn-success btn" ID="registerbutton" OnClick="registerbutton_Click"/>
-                   <!-- <input type="submit" id=submitButton class="btn" name="submit" value="Login" required>-->
-                 </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
       </form>
     </div>
   </div>
